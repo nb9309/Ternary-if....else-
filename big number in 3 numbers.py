@@ -1,16 +1,10 @@
-a= float(input("enter value1: "))
-b = float(input("enter value2: "))
-c = float(input("enter value2: "))
-if (a>=b) and (a>c):
-    #(c<a>=b)
-    res = a
-elif (b>a)and(b>=c):
-    #(c<=b>a)
-    res = b
-elif (c>=a)and (c>b):
-    #(b<c>=a)
-    res = c
-else:
-    res = 'same'
 
-print('max(%0.2f, %0.2f, %0.2f) = %s' %(a,b,c,res) )
+a,b=float(input("Enter Value of a:")),float(input("Enter Value of b:"))
+c=float(input("Enter Value of c:"))
+#code for finding big
+#res=a if (a>=b) and (a>c) else b if (b>a) and (b>=c) else c if (c>=a) and (c>b) else "All values are equal"
+# OR---the above can be written as Follows
+res=a if(b<=a>c) else b if(a<b>=c) else c if (a<=c>b) else "All values are equal"
+print("Max({},{},{})={}".format(a,b,c,res))
+
+
